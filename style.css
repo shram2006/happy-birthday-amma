@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+
+  background: #fff7f0;
+  color: #333;
+  text-align: center;
+}
+section {
+  padding: 60px 20px;
+}
+.hero {
+  background: #ffd6c9;
+}
+.final {
+  background: #ffe8e0;
+}
+h1, h2 {
+  color: #b23a48;
+}
+p {
+  font-size: 16px;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+ul li {
+  margin: 10px 0;
+  font-size: 16px;
+}
+/* Fade Animation */
+.fade {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s ease;
+}
+.fade.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Photo Grid */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 600px;
+  margin: 30px auto;
+}
+.photo-grid img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+.photo-grid img:hover {
+  transform: scale(1.05);
+}
+.caption {
+  font-style: italic;
+  margin-top: 20px;
+  color: #555;
+}
+/* Music Button */
+#musicBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #b23a48;
+  color: #fff;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 14px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
