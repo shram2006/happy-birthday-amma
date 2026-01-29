@@ -1,77 +1,140 @@
+/* Base */
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-
   background: #fff7f0;
   color: #333;
   text-align: center;
+  font-size: 18px;
 }
+
 section {
-  padding: 60px 20px;
+  padding: 70px 25px;
 }
+
+/* Headings */
+h1, h2 {
+  font-family: 'Playfair Display', serif;
+  color: #b23a48;
+}
+
+h1 {
+  font-size: 42px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+/* Hero & Final */
 .hero {
   background: #ffd6c9;
 }
+
 .final {
   background: #ffe8e0;
 }
-h1, h2 {
-  color: #b23a48;
-}
+
+/* Text */
 p {
-  font-size: 16px;
+  font-size: 20px;
+  line-height: 1.8;
 }
+
 ul {
   list-style: none;
   padding: 0;
 }
+
 ul li {
-  margin: 10px 0;
-  font-size: 16px;
+  margin: 14px 0;
+  font-size: 20px;
 }
+
 /* Fade Animation */
 .fade {
   opacity: 0;
   transform: translateY(30px);
   transition: all 1s ease;
 }
+
 .fade.show {
   opacity: 1;
   transform: translateY(0);
 }
+
 /* Photo Grid */
 .photo-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  max-width: 600px;
-  margin: 30px auto;
+  gap: 24px;
+  max-width: 700px;
+  margin: 40px auto;
 }
+
 .photo-grid img {
   width: 100%;
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  height: 340px;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.18);
   transition: transform 0.3s ease;
 }
+
 .photo-grid img:hover {
   transform: scale(1.05);
 }
+
 .caption {
   font-style: italic;
-  margin-top: 20px;
+  margin-top: 18px;
+  font-size: 18px;
   color: #555;
 }
-/* Music Button */
+
+/* Music Button (Top) */
 #musicBtn {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  top: 15px;
+  right: 15px;
   background: #b23a48;
   color: #fff;
   border: none;
-  padding: 12px 18px;
-  border-radius: 30px;
+  padding: 10px 16px;
+  border-radius: 25px;
   cursor: pointer;
   font-size: 14px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  z-index: 999;
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+   ========================= */
+@media (max-width: 768px) {
+
+  h1 {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  p, ul li {
+    font-size: 18px;
+  }
+
+  section {
+    padding: 50px 16px;
+  }
+
+  .photo-grid {
+    grid-template-columns: 1fr;
+    max-width: 92%;
+  }
+
+  .photo-grid img {
+    height: 300px;
+  }
 }
